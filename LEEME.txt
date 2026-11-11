@@ -1,0 +1,14 @@
+SIMULACION DE ASENTAMIENTO HUMANO  (NetBeans / Java, Swing)
+
+Abrir: NetBeans > Archivo > Abrir proyecto > carpeta AsentamientoHumano > F6 (Main: presentacion.Main)
+Las librerias (zxing core + javase 3.5.3 para el QR, y PDFBox 3.0.8 para el PDF) ya estan en lib/ y en el classpath.
+
+Capas:
+  modelo        Colono (padre) -> Agricultor / Purificador / Ingeniero ; Familia ; Aldea
+                Evento (abstracta) -> Tormenta / EscasezRecursos / Plaga
+  logica        MotorSimulacion (turnos, decisiones, produccion, consumo, eventos aleatorios)
+  persistencia  GestorArchivos (carpeta datos/: recursos.txt, colonos.txt, eventos.txt)
+                InformePDF (PDF con PDFBox y codigo QR)
+  presentacion  VentanaPrincipal (dashboard), PanelGrafico, IconosAldea, Main
+
+Se guarda solo en cada turno y al cerrar. "Finalizar y exportar PDF" crea Informe_Supervivencia.pdf
